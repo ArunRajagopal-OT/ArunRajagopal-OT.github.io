@@ -1,0 +1,122 @@
+V190"></path>
+<circle cx="128" cy="92" r="4"></circle>
+<circle cx="168" cy="66" r="4"></circle>
+<circle cx="214" cy="92" r="4"></circle>
+<circle cx="128" cy="128" r="4"></circle>
+<circle cx="216" cy="128" r="4"></circle>
+<circle cx="154" cy="190" r="4"></circle>
+<circle cx="196" cy="154" r="4"></circle>
+<path d="M42 198 H96"></path>
+<path d="M244 198 H298"></path>
+<path d="M42 198 V224 H74"></path>
+<path d="M298 198 V224 H266"></path>
+</g>
+<circle class="cyber-art-pulse" r="2.2">
+<animatemotion dur="17s" path="M128 92 H168 V66 M168 92 H214" repeatcount="indefinite"></animatemotion>
+</circle>
+</svg><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div><div class="section-wrap hero-grid"><div class="hero-photo reveal"><div class="hero-photo-inner"><img alt="Arun Rajagopal" data-ar-image="i00-arun-rajagopal" src=""/></div></div><div class="reveal">
+<div class="eyebrow">vCISO · Cybersecurity Expert · CNI · OT Cybersecurity</div>
+<h1>Arun <span>Rajagopal</span></h1>
+<p class="hero-titleline">Principal Cybersecurity Advisor and Architect</p>
+<div class="badges">
+<span class="badge">Chartered Engineer</span>
+<span class="badge">ISA/IEC 62443 Cybersecurity Expert</span>
+<span class="badge">ISASecure ACSSA Evaluator Specialist</span>
+</div>
+<p class="lead"><strong>Cybersecurity Leader, Principal Advisor and Principal Architect</strong></p>
+<p class="sublead">More than 25 years of experience across industrial automation, control systems, cybersecurity strategy, architecture, risk, assurance, programme leadership and commercial delivery.</p>
+<div class="hero-keywords">OT &amp; ICS Security <span>·</span> IEC 62443 <span>·</span> Cyber Risk <span>·</span> Security Architecture <span>·</span> NIS2 <span>·</span> CNI <span>·</span> Product Security <span>·</span> Automotive Cyber Security</div>
+<div class="cta-row"><button class="btn-primary" data-target="profile">Explore Profile</button><button aria-disabled="true" class="btn-secondary cv-download-placeholder" title="CV download will be available soon" type="button"><svg aria-hidden="true" class="cv-download-icon" viewbox="0 0 24 24">
+<path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3"></path>
+</svg>Download CV</button><button class="btn-secondary" data-target="contact"><span class="live-dot"></span>Connect</button></div>
+</div></div><div class="hero-line"></div></section>
+<main class="content">
+<section class="reveal" id="profile">
+<div class="section-kicker">01. Executive Summary</div>
+<h2 class="section-title">OT Cybersecurity Leadership for Critical and Regulated Environments</h2>
+<div class="executive-profile-wrap">
+<div class="executive-copy">
+<p class="executive-lead">Arun Rajagopal is a senior OT cybersecurity and industrial cybersecurity expert with more than 25 years of experience across industrial automation, control systems, cyber security consulting, architecture, programme delivery and business leadership.</p>
+<p>His experience spans the full operating context of industrial cybersecurity: from PLC, SCADA, DCS and safety systems through to cyber strategy, regulatory assurance, security transformation and executive decision support.</p>
+<p>He has held Head of Cyber Security, Managing Principal Consultant, Principal OT Cyber Security Consultant, Security Architect, Delivery Manager and Department Manager responsibilities, alongside commercial ownership covering P&amp;L, recruitment, proposals, client relationships and delivery.</p>
+<p>This combination allows him to connect engineering reality, cyber risk, regulation, commercial priorities and delivery, particularly in environments where security must coexist with safety, availability and operational continuity.</p>
+</div>
+<aside class="card executive-role-card">
+<div class="meta">Selected Leadership Roles</div>
+<div class="role-stack"><span>Head of Cyber Security</span><span>Managing Principal Consultant</span><span>Principal OT Cyber Security Consultant</span><span>Lead / Principal OT Cyber Security Architect</span><span>OT Security Officer</span><span>Department Manager &amp; Engineering Leader</span></div>
+</aside>
+</div>
+</section><section class="reveal" id="leadership">
+<div class="section-kicker">02. What He Can Own</div>
+<h2 class="section-title">From Board-Level Direction to Delivery Oversight</h2>
+<p class="section-copy">Arun's background is strongest where cyber security leadership needs to bridge strategy, engineering, commercial delivery and operational risk.</p>
+<div class="leadership-grid">
+<article class="card leadership-card"><div class="meta">vCISO / Cyber Leadership</div><h3>Set cybersecurity direction and governance</h3><p>Establish security priorities, governance, risk ownership, executive reporting and improvement roadmaps, providing experienced cyber leadership across both enterprise and operational environments.</p></article>
+<article class="card leadership-card"><div class="meta">OT Security Strategy</div><h3>Turn risk into a practical security programme</h3><p>Develop OT security strategy, target-state architecture, remediation priorities and implementation plans aligned with operational criticality, business risk and regulatory expectations.</p></article>
+<article class="card leadership-card"><div class="meta">Architecture &amp; Technical Authority</div><h3>Provide senior design and assurance oversight</h3><p>Lead architecture decisions across segmentation, zones and conduits, secure remote access, industrial networking, supplier integration, hardening, threat detection and resilience.</p></article>
+<article class="card leadership-card"><div class="meta">Risk &amp; Regulatory Assurance</div><h3>Translate standards and regulation into workable controls</h3><p>Lead IEC 62443, NIS/NIS2, NCSC CAF, NIST and ISO 27001-aligned assurance, while supporting EU Cyber Resilience Act readiness through product-security governance, vulnerability handling, supplier assurance and lifecycle security.</p></article>
+<article class="card leadership-card"><div class="meta">Programme &amp; Transformation Leadership</div><h3>Lead multi-workstream security improvement</h3><p>Coordinate security, network and engineering workstreams, suppliers and stakeholders across complex programmes, with clear reporting on progress, dependencies, risks and residual exposure.</p></article>
+<article class="card leadership-card"><div class="meta">Commercial &amp; Practice Leadership</div><h3>Build teams, services and client capability</h3><p>Support pre-sales, proposals, service development, recruitment, resource planning, P&amp;L and capability building, drawing on previous leadership of consulting and engineering teams.</p></article>
+</div>
+</section><section class="reveal" id="sectors">
+<div class="section-kicker">03. Selected Sector Experience</div>
+<h2 class="section-title">Experience Across Critical Infrastructure and Industrial Operations</h2>
+<p class="section-copy">The emphasis here is on the operating environments and security problems Arun has handled, rather than reproducing a job-by-job employment history.</p>
+<div class="sector-showcase">
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-offshore" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M22 126 H238" pathlength="1"></path>
+<path d="M36 126 C52 120 66 132 82 126 C98 120 112 132 128 126 C144 120 158 132 174 126 C190 120 204 132 222 126" pathlength="1"></path>
+<path d="M70 112 H190 L178 92 H82 Z" pathlength="1"></path>
+<path d="M94 92 V54 H122 V92" pathlength="1"></path>
+<path d="M130 92 V42 H158 V92" pathlength="1"></path>
+<path d="M137 42 V20 H151 V42" pathlength="1"></path>
+<path d="M144 20 V10" pathlength="1"></path>
+<path d="M78 112 L94 92 M182 112 L164 92" pathlength="1"></path>
+<path d="M104 54 H114 M140 54 H150 M140 66 H150" pathlength="1"></path>
+<path d="M61 83 H82 M178 70 H206" pathlength="1"></path>
+<path d="M206 70 V94" pathlength="1"></path>
+</g>
+</svg><div class="sector-label sector-content-layer">Oil &amp; Gas / Offshore</div><h3 class="sector-content-layer">Cyber security architecture and assurance for offshore assets</h3><p class="sector-content-layer">Led cyber security engineering for brownfield FPSO and offshore-platform programmes, including network and security design, stakeholder workshops, IEC 62443-aligned compliance, supplier integration, hardening, cyber FAT and commissioning assurance.</p><div class="sector-tags sector-content-layer"><span>FPSO</span><span>SCADA / ICSS</span><span>IEC 62443</span><span>Commissioning</span></div></article>
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-energy" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M32 126 H232" pathlength="1"></path>
+<path d="M82 126 V58" pathlength="1"></path>
+<path d="M82 58 L48 38 M82 58 L116 38 M82 58 L82 18" pathlength="1"></path>
+<path d="M82 58 C82 58 82 58 82 58" pathlength="1"></path>
+<path d="M156 126 V52 L178 126" pathlength="1"></path>
+<path d="M146 74 H188 M140 94 H194" pathlength="1"></path>
+<path d="M156 52 L178 52 M146 74 L188 74" pathlength="1"></path>
+<path d="M134 126 H204" pathlength="1"></path>
+<path d="M206 126 V90 H232 V126" pathlength="1"></path>
+<path d="M211 98 H227 M211 106 H227 M211 114 H227" pathlength="1"></path>
+<path d="M188 74 C204 70 216 76 226 68" pathlength="1"></path>
+</g>
+</svg><div class="sector-label sector-content-layer">Energy &amp; Renewables</div><h3 class="sector-content-layer">Secure-by-design architecture and assurance across offshore wind and power</h3><p class="sector-content-layer">Supported offshore wind security architecture and compliance, including Hornsea 3 and Dowsing-related work, with experience spanning supplier assurance, network architecture, risk assessment, technical review and wider CNI readiness.</p><div class="sector-tags sector-content-layer"><span>Offshore Wind</span><span>Substations</span><span>Supplier Assurance</span><span>CNI</span></div></article>
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-rail" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M25 124 H235" pathlength="1"></path>
+<path d="M48 116 H188 C210 116 222 102 226 88 L216 60 C212 48 202 40 188 40 H72 C58 40 48 50 48 64 Z" pathlength="1"></path>
+<path d="M62 54 H110 V78 H58 M120 54 H168 V78 H120 M178 54 H200 L212 78 H178 Z" pathlength="1"></path>
+<path d="M64 116 A10 10 0 0 0 84 116 M174 116 A10 10 0 0 0 194 116" pathlength="1"></path>
+<path d="M38 132 H222" pathlength="1"></path>
+<path d="M52 132 L44 140 M82 132 L74 140 M112 132 L104 140 M142 132 L134 140 M172 132 L164 140 M202 132 L194 140" pathlength="1"></path>
+<path d="M220 40 V92 M212 48 H234 M212 62 H234" pathlength="1"></path>
+<path d="M228 50 V58" pathlength="1"></path>
+</g>
+</svg><div class="sector-label sector-content-layer">Rail &amp; Transportation</div><h3 class="sector-content-layer">UK OT cybersecurity leadership across rail and transportation</h3><p class="sector-content-layer">Held Head of Cyber Security and earlier Principal OT Cyber Security Consultant responsibilities within the UK business of an international rail and energy technology consultancy. Led OT cybersecurity delivery for UK rail clients across operators, infrastructure, rolling stock and manufacturers, including cyber strategy, IEC 62443-3-2 risk assessment, CSMPs, zones and conduits, assurance and training.</p><div class="sector-tags sector-content-layer"><span>Rolling Stock</span><span>TS 50701</span><span>IEC 62443-3-2</span><span>CSMP</span></div></article>
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-pharma" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M36 126 H230" pathlength="1"></path>
+<path d="M60 126 V66 H104 V126" pathlength="1"></path>
+<path d="M68 66 V50 H96 V66" pathlength="1"></path>
+<path d="M70 84 H94 M70 98 H94 M70 112 H94" pathlength="1"></path>
+<path d="M136 126 V58 C136 44 148 34 162 34 C176 34 188 44 188 58 V126" pathlength="1"></path>
+<path d="M136 78 H188" pathlength="1"></path>
+<path d="M148 34 V18 H176 V34" pathlength="1"></path>
+<path d="M188 90 H216 V64 H232" pathlength="1"></path>
+<path d="M216 90 V118" pathlength="1"></path>
+<path d="M104 88 H124 V58 H136" pathlength="1"></path>
+<path d="M206 56 C216 40 230 42 236 52" pathlength="1"></path>
+</g>
+</svg><div class="sect
