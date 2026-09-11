@@ -1,0 +1,460 @@
+c strong{
+  font-size:11.5px;
+  line-height:1.15;
+  letter-spacing:-.01em;
+}
+.sidebar-metrics-simple .sidebar-metric:first-child strong{
+  font-size:15px;
+}
+.sidebar-metrics-simple .sidebar-metric span{
+  font-size:8.8px;
+  margin-top:4px;
+}
+.sidebar-focus-simple{
+  padding-top:12px;
+  padding-bottom:12px;
+}
+.sidebar-focus-inline{
+  color:var(--muted);
+  font-size:10.5px;
+  line-height:1.5;
+  letter-spacing:.01em;
+}
+
+/* Hero technical line art: very faint and decorative only */
+.hero-fine-art{
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  color:#9eb0bd;
+  opacity:.052;
+}
+.hero-wind-art{
+  right:1.5%;
+  top:11%;
+  width:min(25vw,300px);
+}
+.hero-cyber-art{
+  left:36%;
+  bottom:5%;
+  width:min(23vw,280px);
+  opacity:.045;
+}
+.hero-art-stroke{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:.9;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.wind-rotor{
+  transform-origin:160px 112px;
+  animation:windRotorSlow 24s linear infinite;
+}
+.cyber-art-pulse{
+  fill:#e07a5f;
+  opacity:.20;
+  filter:drop-shadow(0 0 2px rgba(224,122,95,.22));
+}
+@keyframes windRotorSlow{
+  to{transform:rotate(360deg)}
+}
+
+/* Slightly more atmosphere in unused hero space */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 83% 28%, rgba(224,122,95,.035), transparent 22%),
+    radial-gradient(circle at 56% 76%, rgba(112,143,165,.03), transparent 24%);
+}
+
+@media(max-width:1200px){
+  .hero-wind-art{width:250px;right:-2%;opacity:.045}
+  .hero-cyber-art{width:230px;left:42%;opacity:.038}
+}
+@media(max-width:900px){
+  .sidebar-metrics-simple .sidebar-metric strong{font-size:10.5px}
+  .hero-wind-art{width:200px;right:-5%;top:14%;opacity:.035}
+  .hero-cyber-art{width:180px;left:57%;bottom:4%;opacity:.03}
+}
+@media(max-width:700px){
+  .hero-fine-art{display:none}
+  .sidebar-metrics-simple{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* Accessibility */
+@media(prefers-reduced-motion:reduce){
+  .wind-rotor{animation:none!important}
+  .cyber-art-pulse{display:none}
+}
+
+/* ICS Security Switzerland supplied logo */
+.membership-brand.brand-ics-switzerland{
+  background:#f7f7f5;
+  padding:10px 12px;
+}
+.membership-brand.brand-ics-switzerland img{
+  display:block;
+  width:96%;
+  max-width:205px;
+  max-height:58px;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Client portfolio */
+.client-portfolio{
+  display:grid;
+  gap:28px;
+  margin-top:24px;
+}
+.client-sector-group{
+  display:grid;
+  gap:12px;
+}
+.client-sector-head{
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  font-weight:850;
+  color:var(--accent);
+  padding-bottom:9px;
+  border-bottom:1px solid var(--line);
+}
+.client-logo-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.client-logo-tile{
+  min-height:100px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:linear-gradient(180deg,var(--surface),#101820);
+  overflow:hidden;
+  transition:border-color .22s ease,background .22s ease;
+}
+.client-logo-tile:hover{
+  border-color:color-mix(in srgb,var(--accent) 32%,var(--line));
+  background:#131d27;
+}
+.client-logo-box{
+  min-height:100px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 12px;
+}
+.client-logo-box img{
+  display:block;
+  max-width:118px;
+  max-height:42px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  filter:saturate(.88) brightness(1.04);
+}
+.client-wordmark{
+  display:block;
+  text-align:center;
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:750;
+  line-height:1.25;
+}
+@media(max-width:1100px){
+  .client-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .client-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .client-logo-grid{grid-template-columns:1fr 1fr}
+  .client-logo-tile,.client-logo-box{min-height:88px}
+}
+
+/* =========================================================
+   Client Portfolio — Horizontal Sector Carousel
+   ========================================================= */
+.client-carousel{
+  margin-top:24px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:linear-gradient(180deg,#0f1720,#0b1219);
+  overflow:hidden;
+  box-shadow:0 18px 46px rgba(0,0,0,.14);
+}
+.client-carousel-bar{
+  min-height:62px;
+  padding:12px 15px 12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border-bottom:1px solid var(--line);
+}
+.client-carousel-status{
+  min-width:0;
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+}
+.client-carousel-current{
+  display:block;
+  color:var(--ink);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:-.01em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.client-carousel-count{
+  color:var(--accent);
+  font-size:9.5px;
+  font-weight:900;
+  letter-spacing:.11em;
+  white-space:nowrap;
+}
+.client-carousel-controls{
+  display:flex;
+  gap:8px;
+  flex:0 0 auto;
+}
+.client-carousel-button{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#101923;
+  color:var(--ink);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  transition:border-color .2s ease,background .2s ease,color .2s ease;
+}
+.client-carousel-button:hover{
+  border-color:rgba(224,122,95,.60);
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.client-carousel-button svg{
+  width:17px;
+  height:17px;
+  fill:currentColor;
+}
+
+.client-carousel-viewport{
+  overflow:hidden;
+  position:relative;
+  transition:height .32s cubic-bezier(.2,.8,.2,1);
+}
+.client-carousel-track{
+  display:flex;
+  align-items:flex-start;
+  width:100%;
+  transition:transform .46s cubic-bezier(.2,.75,.2,1);
+  will-change:transform;
+}
+.client-carousel-slide{
+  width:100%;
+  flex:0 0 100%;
+  box-sizing:border-box;
+  padding:22px 22px 24px;
+}
+.client-carousel-slide .client-sector-head{
+  display:none;
+}
+
+/* Denser logo grid inside the carousel to save vertical space */
+.client-carousel-slide .client-logo-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+}
+.client-carousel-slide .client-logo-tile,
+.client-carousel-slide .client-logo-box{
+  min-height:88px;
+}
+.client-carousel-slide .client-logo-box{
+  padding:11px 10px;
+}
+.client-carousel-slide .client-logo-box img{
+  max-width:108px;
+  max-height:38px;
+}
+.client-carousel-slide .client-wordmark{
+  font-size:10px;
+}
+
+.client-carousel-dots{
+  min-height:38px;
+  padding:8px 16px 12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  border-top:1px solid rgba(255,255,255,.025);
+}
+.client-carousel-dot{
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  padding:0;
+  border:0;
+  background:#52606d;
+  cursor:pointer;
+  transition:width .2s ease,background .2s ease;
+}
+.client-carousel-dot.active{
+  width:22px;
+  background:var(--accent);
+}
+
+@media(max-width:1200px){
+  .client-carousel-slide .client-logo-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+@media(max-width:820px){
+  .client-carousel-slide .client-logo-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:560px){
+  .client-carousel-bar{
+    min-height:58px;
+    padding:10px 12px 10px 14px;
+  }
+  .client-carousel-current{
+    font-size:12px;
+  }
+  .client-carousel-slide{
+    padding:16px;
+  }
+  .client-carousel-slide .client-logo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .client-carousel-slide .client-logo-tile,
+  .client-carousel-slide .client-logo-box{
+    min-height:82px;
+  }
+  .client-carousel-button{
+    width:35px;
+    height:35px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .client-carousel-track,
+  .client-carousel-viewport,
+  .client-carousel-button,
+  .client-carousel-dot{
+    transition:none!important;
+  }
+}
+
+/* Supplied client logos: embedded directly in the HTML */
+.supplied-logo-tile{
+  background:#f7f7f4!important;
+  border-color:rgba(255,255,255,.08)!important;
+}
+.supplied-logo-box{
+  background:#f7f7f4;
+  min-height:100px!important;
+  padding:14px 16px!important;
+}
+.supplied-client-logo{
+  display:block;
+  width:auto!important;
+  height:auto!important;
+  max-width:88%!important;
+  max-height:58px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:none!important;
+}
+/* Wide or taller marks get individual sizing so none are cropped */
+.logo-novartis{max-width:92%!important;max-height:46px!important}
+.logo-coca-cola{max-width:88%!important;max-height:62px!important}
+.logo-moet-hennessy{max-width:92%!important;max-height:50px!important}
+.logo-pernod-ricard{max-width:88%!important;max-height:72px!important}
+.logo-barry-callebaut{max-width:92%!important;max-height:48px!important}
+.logo-novo-nordisk{max-height:66px!important}
+.logo-gsk{max-height:54px!important}
+
+@media(max-width:560px){
+  .supplied-logo-box{min-height:88px!important;padding:12px!important}
+  .supplied-client-logo{max-height:52px!important}
+}
+
+/* Supplied Oil & Gas / Renewable client logos */
+.logo-total{max-width:90%!important;max-height:52px!important}
+.logo-bp{max-width:72%!important;max-height:62px!important}
+.logo-shell{max-width:58%!important;max-height:68px!important}
+.logo-exxonmobil{max-width:86%!important;max-height:44px!important}
+.logo-equinor{max-width:90%!important;max-height:50px!important}
+.logo-aker-solutions{max-width:94%!important;max-height:50px!important}
+.logo-ramboll{max-width:94%!important;max-height:54px!important}
+.logo-orsted{max-width:82%!important;max-height:58px!important}
+
+/* Supplied ICS System Integrator client logos */
+.logo-rockwell-automation{max-width:94%!important;max-height:54px!important}
+.logo-yokogawa{max-width:82%!important;max-height:66px!important}
+.logo-abb{max-width:78%!important;max-height:54px!important}
+.logo-schneider-electric{max-width:92%!important;max-height:62px!important}
+.logo-emerson{max-width:94%!important;max-height:64px!important}
+.logo-honeywell{max-width:86%!important;max-height:48px!important}
+
+/* Supplied Cyber Security Consulting logos */
+.logo-ncc-group{max-width:92%!important;max-height:48px!important}
+.logo-kudelski-security{max-width:86%!important;max-height:64px!important}
+.logo-secura{max-width:68%!important;max-height:66px!important}
+.logo-applied-risk{max-width:82%!important;max-height:64px!important}
+.logo-cyber-prism{max-width:90%!important;max-height:54px!important}
+
+/* Five consulting firms fit neatly on one desktop row */
+.consulting-logo-grid{
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+}
+@media(max-width:1000px){
+  .consulting-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:560px){
+  .consulting-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+/* Remaining supplied logos from ZIP */
+.logo-network-rail{max-width:92%!important;max-height:40px!important}
+.logo-porterbrook{max-width:90%!important;max-height:44px!important}
+.logo-transport-for-london{max-width:92%!important;max-height:42px!important}
+.logo-london-underground{max-width:72%!important;max-height:62px!important}
+.logo-transport-for-greater-manchester{max-width:92%!important;max-height:38px!important}
+.logo-alstom{max-width:88%!important;max-height:54px!important}
+.logo-hitachi-rail{max-width:92%!important;max-height:42px!important}
+.logo-national-grid{max-width:92%!important;max-height:42px!important}
+.logo-maersk{max-width:80%!important;max-height:52px!important}
+.logo-worley{max-width:84%!important;max-height:44px!important}
+.logo-kbr{max-width:72%!important;max-height:52px!important}
+.logo-fluor{max-width:82%!important;max-height:42px!important}
+.logo-eni{max-width:78%!important;max-height:52px!important}
+.logo-wood{max-width:72%!important;max-height:56px!important}
+.logo-jacobs{max-width:90%!important;max-height:44px!important}
+.logo-snc-lavalin{max-width:88%!important;max-height:46px!important}
+.logo-cameron-subsea{max-width:92%!important;max-height:42px!important}
+.logo-foster-wheeler{max-width:84%!important;max-height:44px!important}
+.logo-cbi{max-width:82%!important;max-height:46px!important}
+
+/* Rail slide balances 7 logos neatly */
+.rail-logo-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+@media(max-width:900px){
+  .rail-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!imp
