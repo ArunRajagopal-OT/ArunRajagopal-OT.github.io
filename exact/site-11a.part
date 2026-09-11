@@ -1,0 +1,46 @@
+-box supplied-logo-box"><img alt="Novo Nordisk" class="supplied-client-logo logo-novo-nordisk" data-ar-image="i47-novo-nordisk" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="4"><div class="client-sector-head">Energy, Utilities &amp; Renewables</div><div class="client-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="National Grid" class="supplied-client-logo logo-national-grid" data-ar-image="i48-national-grid" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Ørsted" class="supplied-client-logo logo-orsted" data-ar-image="i49-orsted" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="5"><div class="client-sector-head">Manufacturing &amp; FMCG</div><div class="client-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Coca-Cola" class="supplied-client-logo logo-coca-cola" data-ar-image="i50-coca-cola" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Moët Hennessy" class="supplied-client-logo logo-moet-hennessy" data-ar-image="i51-moet-hennessy" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Pernod Ricard" class="supplied-client-logo logo-pernod-ricard" data-ar-image="i52-pernod-ricard" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Barry Callebaut" class="supplied-client-logo logo-barry-callebaut" data-ar-image="i53-barry-callebaut" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="6"><div class="client-sector-head">Cyber Security Consulting</div><div class="client-logo-grid consulting-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="NCC Group" class="supplied-client-logo logo-ncc-group" data-ar-image="i54-ncc-group" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Kudelski Security" class="supplied-client-logo logo-kudelski-security-current" data-ar-image="i55-kudelski-security" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Secura" class="supplied-client-logo logo-secura" data-ar-image="i56-secura" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Applied Risk" class="supplied-client-logo logo-applied-risk" data-ar-image="i57-applied-risk" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Cyber Prism" class="supplied-client-logo logo-cyber-prism" data-ar-image="i58-cyber-prism" loading="lazy" src=""/></div></div></div></div></div></div><div class="client-carousel-dots" id="clientCarouselDots"><button aria-label="Show Oil &amp; Gas &amp; Engineering" class="client-carousel-dot active" data-slide="0" title="Oil &amp; Gas &amp; Engineering" type="button"></button><button aria-label="Show ICS System Integrators" class="client-carousel-dot" data-slide="1" title="ICS System Integrators" type="button"></button><button aria-label="Show Rail &amp; Transportation" class="client-carousel-dot" data-slide="2" title="Rail &amp; Transportation" type="button"></button><button aria-label="Show Pharmaceuticals &amp; Life Sciences" class="client-carousel-dot" data-slide="3" title="Pharmaceuticals &amp; Life Sciences" type="button"></button><button aria-label="Show Energy, Utilities &amp; Renewables" class="client-carousel-dot" data-slide="4" title="Energy, Utilities &amp; Renewables" type="button"></button><button aria-label="Show Manufacturing &amp; FMCG" class="client-carousel-dot" data-slide="5" title="Manufacturing &amp; FMCG" type="button"></button><button aria-label="Show Cyber Security Consulting" class="client-carousel-dot" data-slide="6" title="Cyber Security Consulting" type="button"></button></div></div></section><section class="reveal" id="contact">
+<div class="closing-panel card">
+<div class="section-kicker">08. Connect</div>
+<h2>Cybersecurity Leadership for Critical and Regulated Systems</h2>
+<p>Arun works at the intersection of engineering, cybersecurity, risk, regulation and business leadership, helping organisations set direction, strengthen resilience and deliver practical security improvement across critical environments.</p>
+<a class="btn-primary closing-link" href="https://www.linkedin.com/in/arajagopal/" rel="noopener" target="_blank">Connect on LinkedIn</a>
+</div>
+</section></main>
+</div>
+<script>
+(function () {
+  const q = (selector, root = document) => root.querySelector(selector);
+  const qa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+  const sidebar = q('#sidebar');
+  const overlay = q('#overlay');
+  const menuBtn = q('#menuBtn');
+
+  function closeMenu() {
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (menuBtn && sidebar && overlay) {
+    menuBtn.addEventListener('click', function () {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    overlay.addEventListener('click', closeMenu);
+  }
+
+  function go(id) {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    closeMenu();
+  }
+
+  qa('[data-target]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      go(button.dataset.target);
+    });
+  });
+
+  const sectionIds = ['hero', 'profile', 'leadership', 'sectors', 'impact', 'cred
