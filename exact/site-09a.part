@@ -1,0 +1,72 @@
+or-label sector-content-layer">Pharmaceuticals &amp; Life Sciences</div><h3 class="sector-content-layer">OT security transformation across global R&amp;D and manufacturing</h3><p class="sector-content-layer">Held delivery, architecture and advisory responsibilities across major pharmaceutical environments, supporting global R&amp;D, laboratories and manufacturing OT. Work included network segmentation and firewall lockdown, secure remote access, vulnerability management, asset visibility, identity and endpoint controls, third-party risk, security tooling, governance and leadership reporting.</p><div class="sector-tags sector-content-layer"><span>Global R&amp;D</span><span>Manufacturing OT</span><span>Segmentation</span><span>Third-Party Risk</span></div></article><article class="card sector-feature">
+<svg aria-hidden="true" class="sector-line-art sector-art-manufacturing" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M28 126 H238" pathlength="1"></path>
+<path d="M42 126 V78 L76 94 V72 L112 94 V68 L150 92 V126" pathlength="1"></path>
+<path d="M150 126 V54 H200 V126" pathlength="1"></path>
+<path d="M164 54 V28 H180 V54" pathlength="1"></path>
+<path d="M210 126 V84 H232 V126" pathlength="1"></path>
+<path d="M54 108 H140" pathlength="1"></path>
+<path d="M62 108 V118 M82 108 V118 M102 108 V118 M122 108 V118" pathlength="1"></path>
+<path d="M158 70 H190 M158 84 H190 M158 98 H190" pathlength="1"></path>
+<path d="M42 64 H118" pathlength="1"></path>
+<circle cx="54" cy="64" pathlength="1" r="4"></circle>
+<circle cx="82" cy="64" pathlength="1" r="4"></circle>
+<circle cx="110" cy="64" pathlength="1" r="4"></circle>
+</g>
+</svg>
+<div class="sector-label sector-content-layer">Manufacturing &amp; FMCG</div>
+<h3 class="sector-content-layer">OT architecture, risk and resilience across manufacturing environments</h3>
+<p class="sector-content-layer">Delivered manufacturing OT assessments and security improvement across food, beverage and FMCG environments. Experience includes security posture and gap assessment, IEC 62443-3-2 risk assessment, IT/OT segmentation and iDMZ design, firewall modernisation, asset visibility, threat detection, vulnerability assessment and practical remediation roadmaps for operational sites.</p>
+<div class="sector-tags sector-content-layer">
+<span>Manufacturing OT</span><span>IEC 62443-3-2</span><span>iDMZ / Segmentation</span><span>Asset &amp; Vulnerability Visibility</span>
+</div>
+</article><article class="card sector-feature">
+<svg aria-hidden="true" class="sector-line-art sector-art-product-security" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M48 112 H212" pathlength="1"></path>
+<path d="M76 112 V70 H116 V112" pathlength="1"></path>
+<path d="M144 112 V54 H188 V112" pathlength="1"></path>
+<path d="M86 82 H106 M86 94 H106" pathlength="1"></path>
+<path d="M154 68 H178 M154 82 H178 M154 96 H178" pathlength="1"></path>
+<path d="M116 90 H144" pathlength="1"></path>
+<circle cx="130" cy="90" pathlength="1" r="4"></circle>
+<path d="M130 90 V46" pathlength="1"></path>
+<path d="M112 46 H148" pathlength="1"></path>
+<path d="M112 46 C112 30 120 20 130 16 C140 20 148 30 148 46" pathlength="1"></path>
+<path d="M130 16 V8" pathlength="1"></path>
+<path d="M52 126 H208" pathlength="1"></path>
+</g>
+</svg>
+<div class="sector-label sector-content-layer">Product Security &amp; CRA</div>
+<h3 class="sector-content-layer">Product security assurance and Cyber Resilience Act readiness</h3>
+<p class="sector-content-layer">Supports product and system suppliers in assessing cybersecurity capability, clarifying CRA applicability and strengthening evidence across the secure development lifecycle. Experience includes IEC 62443-2-4 maturity review, IEC 62443-4-1 secure product development, IEC 62443-4-2 component security requirements, vulnerability management, incident response, backup and recovery, and readiness for structured assurance and pre-audit review.</p>
+<div class="sector-tags sector-content-layer">
+<span>EU CRA</span>
+<span>IEC 62443-4-1</span>
+<span>IEC 62443-4-2</span>
+<span>Product Assurance</span>
+</div>
+</article>
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-aviation" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M24 124 H236" pathlength="1"></path>
+<path d="M32 72 L112 82 L146 52 L158 54 L140 84 L210 94 L220 102 L136 98 L104 118 L94 116 L108 98 L50 92 Z" pathlength="1"></path>
+<path d="M178 124 V92 H226 V124" pathlength="1"></path>
+<path d="M186 100 H218 M186 108 H218 M186 116 H218" pathlength="1"></path>
+<path d="M50 124 V104 H82 V124" pathlength="1"></path>
+<path d="M56 112 H76" pathlength="1"></path>
+<path d="M84 124 C96 110 108 110 120 124" pathlength="1"></path>
+<path d="M118 124 C128 110 140 110 150 124" pathlength="1"></path>
+</g>
+</svg><div class="sector-label sector-content-layer">Aviation</div><h3 class="sector-content-layer">NIS assurance across airport operational technology</h3><p class="sector-content-layer">Delivered NIS-aligned cybersecurity assurance for major UK airport OT environments, covering ICS, PLC and SCADA-based systems. Assessment scope included baggage movement, airfield ground lighting, building and access-control systems, HVAC, tunnels and internal transport systems, with evidence review, maturity assessment and practical remediation support.</p><div class="sector-tags sector-content-layer"><span>Airport OT</span><span>NIS / NCSC CAF</span><span>ICS · PLC · SCADA</span><span>Operational Resilience</span></div></article>
+<article class="card sector-feature"><svg aria-hidden="true" class="sector-line-art sector-art-services" viewbox="0 0 260 150">
+<g class="sector-draw">
+<path d="M130 28 V52 M130 98 V122 M58 74 H94 M166 74 H202" pathlength="1"></path>
+<path d="M130 52 L94 74 L130 98 L166 74 Z" pathlength="1"></path>
+<path d="M58 74 L38 48 M58 74 L38 102 M202 74 L222 48 M202 74 L222 102" pathlength="1"></path>
+<path d="M118 18 H142 V38 H118 Z" pathlength="1"></path>
+<path d="M24 36 H50 V58 H24 Z" pathlength="1"></path>
+<path d="M24 92 H50 V114 H24 Z" pathlength="1"></path>
+<path d="M210 36 H236 V58 H210 Z" pathlength="1"></path>
+<path d="M210 92 H236 V114 H210 Z" pathlengt
