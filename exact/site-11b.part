@@ -144,15 +144,15 @@ entials', 'education', 'clients', 'contact'];
 })();
 </script><script id="ar-image-loader">(()=>{
 const profile=document.querySelector('img[data-ar-image="i00-arun-rajagopal"]');if(profile)profile.src='assets/profile.webp';
-const groups=[
+const byNum={};document.querySelectorAll('img[data-ar-image]').forEach(el=>{const m=/^i(\d+)/.exec(el.dataset.arImage||'');if(m)byNum[+m[1]]=el});
+function loadGroup(g,src){const im=new Image();im.onload=()=>{const cw=g.w/g.cols,ch=g.h/g.rows;for(let k=0;k<g.count;k++){const target=byNum[g.start+k];if(!target)continue;const col=k%g.cols,row=Math.floor(k/g.cols);const c=document.createElement('canvas');c.width=Math.round(cw*2);c.height=Math.round(ch*2);const x=c.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(im,col*cw,row*ch,cw,ch,0,0,c.width,c.height);c.toBlob(b=>{if(b)target.src=URL.createObjectURL(b)},'image/webp',.95)}};im.src=src}
+[
  {file:'assets/credentials-1.webp',start:1,count:6,cols:3,rows:2,w:570,h:210},
  {file:'assets/credentials-2.webp',start:7,count:6,cols:3,rows:2,w:570,h:210},
  {file:'assets/clients-1.webp',start:13,count:10,cols:5,rows:2,w:800,h:164},
  {file:'assets/clients-2.webp',start:23,count:10,cols:5,rows:2,w:800,h:164},
  {file:'assets/clients-3.webp',start:33,count:10,cols:5,rows:2,w:800,h:164},
- {file:'assets/clients-4.webp',start:43,count:10,cols:5,rows:2,w:800,h:164},
  {file:'assets/clients-5.webp',start:53,count:6,cols:5,rows:2,w:800,h:164}
-];
-const byNum={};document.querySelectorAll('img[data-ar-image]').forEach(el=>{const m=/^i(\d+)/.exec(el.dataset.arImage||'');if(m)byNum[+m[1]]=el});
-for(const g of groups){const im=new Image();im.onload=()=>{const cw=g.w/g.cols,ch=g.h/g.rows;for(let k=0;k<g.count;k++){const target=byNum[g.start+k];if(!target)continue;const col=k%g.cols,row=Math.floor(k/g.cols);const c=document.createElement('canvas');c.width=Math.round(cw*2);c.height=Math.round(ch*2);const x=c.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(im,col*cw,row*ch,cw,ch,0,0,c.width,c.height);c.toBlob(b=>{if(b)target.src=URL.createObjectURL(b)},'image/webp',.95)}};im.src=g.file}
+].forEach(g=>loadGroup(g,g.file));
+Promise.all([0,1,2,3].map(i=>fetch('assets/clients4-b64-'+i+'.txt').then(r=>{if(!r.ok)throw new Error('clients4 part '+i+' '+r.status);return r.text()}))).then(parts=>loadGroup({start:43,count:10,cols:5,rows:2,w:800,h:164},'data:image/webp;base64,'+parts.join(''))).catch(e=>console.error('Client logo sheet 4:',e));
 })();</script></body></html>
