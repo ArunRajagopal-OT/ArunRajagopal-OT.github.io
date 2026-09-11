@@ -1,0 +1,203 @@
+-box supplied-logo-box"><img alt="Novo Nordisk" class="supplied-client-logo logo-novo-nordisk" data-ar-image="i47-novo-nordisk" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="4"><div class="client-sector-head">Energy, Utilities &amp; Renewables</div><div class="client-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="National Grid" class="supplied-client-logo logo-national-grid" data-ar-image="i48-national-grid" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Ørsted" class="supplied-client-logo logo-orsted" data-ar-image="i49-orsted" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="5"><div class="client-sector-head">Manufacturing &amp; FMCG</div><div class="client-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Coca-Cola" class="supplied-client-logo logo-coca-cola" data-ar-image="i50-coca-cola" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Moët Hennessy" class="supplied-client-logo logo-moet-hennessy" data-ar-image="i51-moet-hennessy" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Pernod Ricard" class="supplied-client-logo logo-pernod-ricard" data-ar-image="i52-pernod-ricard" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Barry Callebaut" class="supplied-client-logo logo-barry-callebaut" data-ar-image="i53-barry-callebaut" loading="lazy" src=""/></div></div></div></div><div class="client-carousel-slide" data-slide-index="6"><div class="client-sector-head">Cyber Security Consulting</div><div class="client-logo-grid consulting-logo-grid"><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="NCC Group" class="supplied-client-logo logo-ncc-group" data-ar-image="i54-ncc-group" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Kudelski Security" class="supplied-client-logo logo-kudelski-security-current" data-ar-image="i55-kudelski-security" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Secura" class="supplied-client-logo logo-secura" data-ar-image="i56-secura" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Applied Risk" class="supplied-client-logo logo-applied-risk" data-ar-image="i57-applied-risk" loading="lazy" src=""/></div></div><div class="client-logo-tile supplied-logo-tile"><div class="client-logo-box supplied-logo-box"><img alt="Cyber Prism" class="supplied-client-logo logo-cyber-prism" data-ar-image="i58-cyber-prism" loading="lazy" src=""/></div></div></div></div></div></div><div class="client-carousel-dots" id="clientCarouselDots"><button aria-label="Show Oil &amp; Gas &amp; Engineering" class="client-carousel-dot active" data-slide="0" title="Oil &amp; Gas &amp; Engineering" type="button"></button><button aria-label="Show ICS System Integrators" class="client-carousel-dot" data-slide="1" title="ICS System Integrators" type="button"></button><button aria-label="Show Rail &amp; Transportation" class="client-carousel-dot" data-slide="2" title="Rail &amp; Transportation" type="button"></button><button aria-label="Show Pharmaceuticals &amp; Life Sciences" class="client-carousel-dot" data-slide="3" title="Pharmaceuticals &amp; Life Sciences" type="button"></button><button aria-label="Show Energy, Utilities &amp; Renewables" class="client-carousel-dot" data-slide="4" title="Energy, Utilities &amp; Renewables" type="button"></button><button aria-label="Show Manufacturing &amp; FMCG" class="client-carousel-dot" data-slide="5" title="Manufacturing &amp; FMCG" type="button"></button><button aria-label="Show Cyber Security Consulting" class="client-carousel-dot" data-slide="6" title="Cyber Security Consulting" type="button"></button></div></div></section><section class="reveal" id="contact">
+<div class="closing-panel card">
+<div class="section-kicker">08. Connect</div>
+<h2>Cybersecurity Leadership for Critical and Regulated Systems</h2>
+<p>Arun works at the intersection of engineering, cybersecurity, risk, regulation and business leadership, helping organisations set direction, strengthen resilience and deliver practical security improvement across critical environments.</p>
+<a class="btn-primary closing-link" href="https://www.linkedin.com/in/arajagopal/" rel="noopener" target="_blank">Connect on LinkedIn</a>
+</div>
+</section></main>
+</div>
+<script>
+(function () {
+  const q = (selector, root = document) => root.querySelector(selector);
+  const qa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+  const sidebar = q('#sidebar');
+  const overlay = q('#overlay');
+  const menuBtn = q('#menuBtn');
+
+  function closeMenu() {
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (menuBtn && sidebar && overlay) {
+    menuBtn.addEventListener('click', function () {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    overlay.addEventListener('click', closeMenu);
+  }
+
+  function go(id) {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    closeMenu();
+  }
+
+  qa('[data-target]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      go(button.dataset.target);
+    });
+  });
+
+  const sectionIds = ['hero', 'profile', 'leadership', 'sectors', 'impact', 'credentials', 'education', 'clients', 'contact'];
+  const dockShell = q('#dockShell');
+
+  function updateNavigation() {
+    if (dockShell) dockShell.classList.toggle('scrolled', window.scrollY > 20);
+
+    let active = 'hero';
+    const position = window.scrollY + 170;
+
+    sectionIds.forEach(function (id) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= position) active = id;
+    });
+
+    qa('.nav-link').forEach(function (link) {
+      link.classList.toggle('active', link.dataset.target === active);
+    });
+  }
+
+  window.addEventListener('scroll', updateNavigation, { passive: true });
+  updateNavigation();
+
+  // Content is intentionally visible without animation so the page works
+  // reliably as a standalone GitHub Pages HTML file.
+  qa('.reveal').forEach(function (el) {
+    el.classList.add('visible');
+  });
+})();
+</script>
+<script>
+(function(){
+  const cards = Array.from(document.querySelectorAll('#sectors .sector-feature'));
+  if(!cards.length) return;
+
+  const reduced = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if(reduced || !('IntersectionObserver' in window)){
+    cards.forEach(card => card.classList.add('sector-drawn'));
+    return;
+  }
+
+  cards.forEach(card => card.classList.add('sector-awaiting-draw'));
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      const card = entry.target;
+      card.classList.remove('sector-awaiting-draw');
+      card.classList.add('sector-drawn');
+      observer.unobserve(card);
+    });
+  },{
+    threshold:.22,
+    rootMargin:'0px 0px -8% 0px'
+  });
+
+  cards.forEach(card => observer.observe(card));
+})();
+</script><script>
+(function(){
+  const track = document.getElementById('clientCarouselTrack');
+  const viewport = document.getElementById('clientCarouselViewport');
+  const slides = track ? Array.from(track.querySelectorAll('.client-carousel-slide')) : [];
+  const prev = document.getElementById('clientPrev');
+  const next = document.getElementById('clientNext');
+  const currentLabel = document.getElementById('clientCarouselCurrent');
+  const countLabel = document.getElementById('clientCarouselCount');
+  const dots = Array.from(document.querySelectorAll('.client-carousel-dot'));
+
+  if(!track || !viewport || !slides.length) return;
+
+  const labels = slides.map(slide => {
+    const head = slide.querySelector('.client-sector-head');
+    return head ? head.textContent.trim() : 'Client Sector';
+  });
+
+  let index = 0;
+
+  function setViewportHeight(){
+    const active = slides[index];
+    if(!active) return;
+    viewport.style.height = active.scrollHeight + 'px';
+  }
+
+  function show(nextIndex){
+    index = (nextIndex + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    currentLabel.textContent = labels[index];
+    countLabel.textContent = String(index + 1).padStart(2,'0') + ' / ' + String(slides.length).padStart(2,'0');
+    dots.forEach((dot,i) => dot.classList.toggle('active', i === index));
+    requestAnimationFrame(setViewportHeight);
+  }
+
+  if(prev) prev.addEventListener('click', () => show(index - 1));
+  if(next) next.addEventListener('click', () => show(index + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => show(Number(dot.dataset.slide))));
+
+  // Keyboard support while the carousel is hovered or focused.
+  const carousel = track.closest('.client-carousel');
+  if(carousel){
+    carousel.setAttribute('tabindex','0');
+    carousel.addEventListener('keydown', e => {
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); show(index - 1); }
+      if(e.key === 'ArrowRight'){ e.preventDefault(); show(index + 1); }
+    });
+  }
+
+  // Touch / pointer swipe.
+  let startX = null;
+  let deltaX = 0;
+
+  viewport.addEventListener('pointerdown', e => {
+    startX = e.clientX;
+    deltaX = 0;
+    viewport.setPointerCapture && viewport.setPointerCapture(e.pointerId);
+  });
+
+  viewport.addEventListener('pointermove', e => {
+    if(startX === null) return;
+    deltaX = e.clientX - startX;
+  });
+
+  viewport.addEventListener('pointerup', e => {
+    if(startX === null) return;
+    if(Math.abs(deltaX) > 55){
+      show(index + (deltaX < 0 ? 1 : -1));
+    }
+    startX = null;
+    deltaX = 0;
+  });
+
+  // Recalculate height after logo images settle and after resize.
+  window.addEventListener('load', setViewportHeight);
+  window.addEventListener('resize', setViewportHeight, {passive:true});
+  slides.forEach(slide => {
+    slide.querySelectorAll('img').forEach(img => {
+      img.addEventListener('load', setViewportHeight, {once:true});
+      img.addEventListener('error', setViewportHeight, {once:true});
+    });
+  });
+
+  show(0);
+})();
+</script><script id="ar-image-loader">(()=>{
+const profile=document.querySelector('img[data-ar-image="i00-arun-rajagopal"]');if(profile)profile.src='assets/profile.webp';
+const groups=[
+ {file:'assets/credentials-1.webp',start:1,count:6,cols:3,rows:2,w:570,h:210},
+ {file:'assets/credentials-2.webp',start:7,count:6,cols:3,rows:2,w:570,h:210},
+ {file:'assets/clients-1.webp',start:13,count:10,cols:5,rows:2,w:800,h:164},
+ {file:'assets/clients-2.webp',start:23,count:10,cols:5,rows:2,w:800,h:164},
+ {file:'assets/clients-3.webp',start:33,count:10,cols:5,rows:2,w:800,h:164},
+ {file:'assets/clients-4.webp',start:43,count:10,cols:5,rows:2,w:800,h:164},
+ {file:'assets/clients-5.webp',start:53,count:6,cols:5,rows:2,w:800,h:164}
+];
+const byNum={};document.querySelectorAll('img[data-ar-image]').forEach(el=>{const m=/^i(\d+)/.exec(el.dataset.arImage||'');if(m)byNum[+m[1]]=el});
+for(const g of groups){const im=new Image();im.onload=()=>{const cw=g.w/g.cols,ch=g.h/g.rows;for(let k=0;k<g.count;k++){const target=byNum[g.start+k];if(!target)continue;const col=k%g.cols,row=Math.floor(k/g.cols);const c=document.createElement('canvas');c.width=Math.round(cw*2);c.height=Math.round(ch*2);const x=c.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(im,col*cw,row*ch,cw,ch,0,0,c.width,c.height);c.toBlob(b=>{if(b)target.src=URL.createObjectURL(b)},'image/webp',.95)}};im.src=g.file}
+})();</script></body></html>
