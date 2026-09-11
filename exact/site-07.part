@@ -1,0 +1,351 @@
+ortant}
+}
+@media(max-width:560px){
+  .rail-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+/* Current supplied professional marks */
+.membership-brand.brand-ceng-current{
+  background:#f7f7f5;
+  padding:9px 12px;
+}
+.membership-brand.brand-ceng-current img{
+  display:block;
+  max-width:94%;
+  max-height:54px;
+  object-fit:contain!important;
+}
+.membership-brand.brand-isa-current{
+  background:#f7f7f5;
+  padding:8px;
+}
+.membership-brand.brand-isa-current img{
+  display:block;
+  max-width:58px;
+  max-height:58px;
+  object-fit:contain!important;
+}
+.logo-kudelski-security-current{
+  max-width:92%!important;
+  max-height:58px!important;
+  object-fit:contain!important;
+}
+.logo-altera-infrastructure{
+  max-width:92%!important;
+  max-height:56px!important;
+  object-fit:contain!important;
+}
+
+/* Credential badge links */
+.credential-badge-link{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  cursor:pointer;
+  position:relative;
+  z-index:2;
+}
+.credential-badge-link img{
+  transition:transform .22s ease,filter .22s ease;
+}
+.credential-badge-link:hover img,
+.credential-badge-link:focus-visible img{
+  transform:scale(1.035);
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.22));
+}
+.credential-badge-link:focus-visible{
+  outline:1px solid var(--accent);
+  outline-offset:4px;
+  border-radius:10px;
+}
+
+/* Manufacturing line illustration */
+.sector-art-manufacturing{
+  width:43%;
+  right:-4px;
+  bottom:-4px;
+}
+
+/* Visible Blog placeholder, intentionally inactive until blog.html exists */
+.blog-placeholder{
+  opacity:.58;
+  cursor:default!important;
+}
+.blog-placeholder::after{
+  content:"";
+  display:inline-block;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  margin-left:5px;
+  vertical-align:middle;
+  background:var(--accent);
+  opacity:.72;
+}
+.blog-placeholder:hover{
+  background:transparent!important;
+  color:var(--muted)!important;
+}
+
+/* Client carousel first slide can be dense: make 19 logos manageable */
+.client-carousel-slide:first-child .client-logo-grid{
+  grid-template-columns:repeat(5,minmax(0,1fr));
+}
+@media(max-width:1200px){
+  .client-carousel-slide:first-child .client-logo-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+@media(max-width:820px){
+  .client-carousel-slide:first-child .client-logo-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:560px){
+  .client-carousel-slide:first-child .client-logo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .credential-badge-link img{transition:none!important}
+}
+
+/* Final professional-standing logo corrections */
+.membership-brand.brand-chartered-engineer-restored{
+  background:#f7f7f5;
+  padding:8px 10px;
+}
+.membership-brand.brand-chartered-engineer-restored img{
+  display:block;
+  max-width:94%;
+  max-height:58px;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.membership-brand.brand-isa-uk-restored{
+  background:#f7f7f5;
+  padding:7px 9px;
+}
+.membership-brand.brand-isa-uk-restored img{
+  display:block;
+  max-width:92%;
+  max-height:60px;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Final ISA UK Section logo supplied by user */
+.membership-brand.brand-isa-uk-final{
+  background:#f7f7f5;
+  padding:7px 10px;
+}
+.membership-brand.brand-isa-uk-final img{
+  display:block;
+  max-width:94%;
+  max-height:60px;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Future CV download placeholder */
+.cv-download-placeholder{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  opacity:.72;
+  cursor:default!important;
+  user-select:none;
+}
+.cv-download-placeholder:hover{
+  transform:none!important;
+  background:inherit!important;
+  border-color:var(--line)!important;
+  color:inherit!important;
+}
+.cv-download-icon{
+  width:15px;
+  height:15px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+/* Exact ISA UK Section logo supplied by user */
+.membership-brand.brand-isa-uk-exact{
+  background:#f7f7f5;
+  padding:9px 10px;
+}
+.membership-brand.brand-isa-uk-exact img{
+  display:block;
+  width:96%;
+  max-width:230px;
+  max-height:58px;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+
+/* Current OneSubsea mark supplied by user */
+.logo-onesubsea{
+  display:block;
+  max-width:92%!important;
+  max-height:58px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:none!important;
+}
+
+/* Product Security / CRA sector illustration */
+.sector-art-product-security{
+  width:41%;
+  right:0;
+  bottom:-2px;
+}
+
+/* Functional Safety credential: match the rest of the dark certification cards */
+.cert-art-fse-dark{
+  background:
+    radial-gradient(circle at 72% 20%,rgba(224,122,95,.07),transparent 36%),
+    linear-gradient(145deg,#0a1016,#111a23)!important;
+  padding:18px 16px!important;
+}
+.cert-art-fse-dark::after{
+  display:block!important;
+}
+.cert-art-fse-dark .fse-dark-logo{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  max-width:330px!important;
+  max-height:104px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:none!important;
+}
+
+/* Newly supplied TÜV SÜD Functional Safety Expert artwork */
+.cert-art-fse-dark .fse-dark-logo-new{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  max-width:360px!important;
+  max-height:108px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:none!important;
+}
+</style>
+</head>
+<body>
+<div class="sidebar-overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar"><div class="dot-pattern"></div><svg aria-hidden="true" class="sidebar-network-art" viewbox="0 0 320 900">
+<defs>
+<lineargradient id="sideNetStroke" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#e07a5f" stop-opacity=".16"></stop>
+<stop offset="50%" stop-color="#8fa6b8" stop-opacity=".12"></stop>
+<stop offset="100%" stop-color="#e07a5f" stop-opacity=".07"></stop>
+</lineargradient>
+</defs>
+<!-- industrial network backbone -->
+<g fill="none" stroke="url(#sideNetStroke)" stroke-width=".85" vector-effect="non-scaling-stroke">
+<path d="M38 110 H118 V198 H208 V286 H276 V376 H194 V468 H88 V568 H164 V666 H264 V760" id="sidebarRoute"></path>
+<path d="M118 198 V130 H218"></path>
+<path d="M208 286 H122 V344 H58"></path>
+<path d="M194 468 H268"></path>
+<path d="M88 568 H36 V642"></path>
+<path d="M164 666 H74"></path>
+</g>
+<!-- tiny engineering nodes -->
+<g fill="none" opacity=".11" stroke="#8fa6b8" stroke-width=".75" vector-effect="non-scaling-stroke">
+<rect height="18" rx="2" width="26" x="25" y="94"></rect>
+<rect height="20" rx="2" width="28" x="104" y="183"></rect>
+<rect height="20" rx="2" width="28" x="195" y="271"></rect>
+<rect height="18" rx="2" width="26" x="263" y="362"></rect>
+<rect height="20" rx="2" width="28" x="180" y="454"></rect>
+<rect height="20" rx="2" width="28" x="74" y="554"></rect>
+<rect height="20" rx="2" width="28" x="150" y="652"></rect>
+<rect height="18" rx="2" width="26" x="251" y="746"></rect>
+<circle cx="218" cy="130" r="7"></circle>
+<circle cx="58" cy="344" r="7"></circle>
+<circle cx="268" cy="468" r="7"></circle>
+<circle cx="36" cy="642" r="7"></circle>
+<circle cx="74" cy="666" r="7"></circle>
+</g>
+<!-- one very slow pulse, deliberately low-key -->
+<circle class="sidebar-network-pulse" r="2.4">
+<animatemotion dur="18s" repeatcount="indefinite">
+<mpath href="#sidebarRoute"></mpath>
+</animatemotion>
+</circle>
+</svg><div class="sidebar-inner">
+<div class="identity"><div class="name">Arun Rajagopal</div><div class="role-pill">Principal Cybersecurity Advisor &amp; Architect</div></div>
+<div class="divider"></div>
+<div class="contact-stack">
+<div class="contact-card">
+<div class="icon-box"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg></div>
+<div><div class="contact-label">Location</div><div class="contact-text">London, United Kingdom</div></div>
+</div>
+<a class="contact-card" href="https://www.linkedin.com/in/arajagopal/" rel="noopener" target="_blank">
+<div class="icon-box"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.8c0-3.77-2.01-5.52-4.7-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.14V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.85 2 3.3V21H21v-7.2Z"></path></svg></div>
+<div><div class="contact-label">Professional Profile</div><div class="contact-text">LinkedIn</div></div>
+</a>
+<div class="contact-card">
+<div class="icon-box"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2 4 5v6c0 5.25 3.4 10.1 8 11 4.6-.9 8-5.75 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4 2.6 2.58 5.6-5.59L18 9l-7 7Z"></path></svg></div>
+<div><div class="contact-label">Professional Focus</div><div class="contact-text">OT · ICS · CNI · Product Security</div></div>
+</div>
+</div>
+<div class="sidebar-executive-stack">
+<div class="sidebar-mini-block sidebar-glance sidebar-glance-simple">
+<div class="sidebar-mini-kicker">At a Glance</div>
+<div class="sidebar-metrics sidebar-metrics-simple">
+<div class="sidebar-metric">
+<strong>25+</strong>
+<span>Years Experience</span>
+</div>
+<div class="sidebar-metric">
+<strong>Cybersecurity</strong>
+<span>Expert</span>
+</div>
+<div class="sidebar-metric">
+<strong>Cybersecurity</strong>
+<span>Leader</span>
+</div>
+</div>
+</div>
+<div class="sidebar-mini-block sidebar-focus sidebar-focus-simple">
+<div class="sidebar-mini-kicker">Focus</div>
+<div class="sidebar-focus-inline">vCISO · CNI · OT Security · Strategy &amp; Assurance</div>
+</div>
+</div><div class="sidebar-bottom"><div class="connect-label">Connect</div><div class="social-row"><a aria-label="LinkedIn" class="social" href="https://www.linkedin.com/in/arajagopal/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.8c0-3.77-2.01-5.52-4.7-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.14V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.85 2 3.3V21H21v-7.2Z"></path></svg></a></div><div class="mini-note">CEng · ISA/IEC 62443 EXPERT · ISASECURE ACSSA</div></div>
+</div></aside>
+<div class="mobile-bar"><button aria-label="Open menu" id="menuBtn"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"></path></svg></button></div>
+<div class="main">
+<div class="dock-shell" id="dockShell"><nav class="dock"><button class="nav-link active" data-target="hero">Home</button><button class="nav-link" data-target="profile">Profile</button><button class="nav-link" data-target="leadership">Leadership</button><button class="nav-link" data-target="sectors">Sectors</button><button class="nav-link" data-target="impact">Value</button><button class="nav-link" data-target="credentials">Credentials</button><button class="nav-link" data-target="education">Education</button><button class="nav-link" data-target="clients">Clients</button><button aria-disabled="true" class="nav-link blog-placeholder" title="Blog coming soon" type="button">Blog</button></nav></div>
+<section class="hero" id="hero"><svg aria-hidden="true" class="hero-fine-art hero-wind-art" viewbox="0 0 320 320">
+<g class="hero-art-stroke">
+<path d="M160 284 V138"></path>
+<path d="M138 284 H182"></path>
+<circle cx="160" cy="112" r="8"></circle>
+<g class="wind-rotor">
+<path d="M160 112 L160 32 C168 42 174 58 174 78 C174 92 168 104 160 112 Z"></path>
+<path d="M160 112 L92 150 C96 136 108 122 126 112 C138 106 150 106 160 112 Z"></path>
+<path d="M160 112 L228 150 C216 154 198 152 180 142 C168 136 162 124 160 112 Z"></path>
+</g>
+<path d="M226 284 V220 H274 V284"></path>
+<path d="M236 232 H264 M236 246 H264 M236 260 H264"></path>
+<path d="M188 182 H236 V220"></path>
+<circle cx="188" cy="182" r="4"></circle>
+<circle cx="236" cy="220" r="4"></circle>
+</g>
+</svg><svg aria-hidden="true" class="hero-fine-art hero-cyber-art" viewbox="0 0 340 260">
+<g class="hero-art-stroke">
+<path d="M170 26 L244 54 V118 C244 168 216 206 170 228 C124 206 96 168 96 118 V54 Z"></path>
+<path d="M128 92 H168 V66"></path>
+<path d="M168 92 H214"></path>
+<path d="M128 128 H154 V154 H196 V128 H216"></path>
+<path d="M154 154 
