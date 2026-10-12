@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex" name="robots"/>
+<title>Privacy and cookies | Arun Rajagopal</title>
+<style>
+  :root{--page:#121210;--surface:#1c1c18;--ink:#f4efe5;--ink-2:#e6dfd4;--muted:#b1aa9d;--line:#37362f;--accent:#ff7a58;--accent-contrast:#171310}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink-2);font:16px/1.7 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  main{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+  a{color:var(--accent)} .back{display:inline-block;margin-bottom:32px;font-size:14px;font-weight:600;text-decoration:none}
+  h1{font-size:40px;line-height:1.1;letter-spacing:-.03em;color:var(--ink);margin:0 0 8px}
+  h2{font-size:20px;color:var(--ink);margin:40px 0 8px}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 32px}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top} th{color:var(--ink)}
+  .choice{margin-top:16px;padding:20px 22px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+  .choice p{margin:0 0 14px} .row{display:flex;gap:10px;flex-wrap:wrap}
+  button{cursor:pointer;padding:10px 18px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;border:1px solid var(--accent);background:transparent;color:var(--ink)}
+  button.yes{background:var(--accent);color:var(--accent-contrast)}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="./">&larr; Back to the portfolio</a>
+<h1>Privacy and cookies</h1>
+<p class="updated">Last updated 12 October 2026</p>
+
+<p>This website is the personal portfolio of Arun Rajagopal, based in London, United Kingdom. This note explains what the site measures, why, and the choices you have.</p>
+
+<h2>What is measured, and why</h2>
+<p>The site uses two analytics tools, only to understand how visitors use it so it can be improved:</p>
+<ul>
+  <li><strong>Google Analytics</strong> (Google): pages viewed, time on the site, how you arrived (for example from LinkedIn or a search), approximate location (city or country), and device and browser type.</li>
+  <li><strong>Microsoft Clarity</strong> (Microsoft): how pages are used, such as clicks, scrolling and anonymised replays of visits, so layout problems can be found.</li>
+</ul>
+<p>Nothing is used for advertising, nothing is sold, and the site has no forms that collect your details. Google's optional data sharing for its own products is switched off.</p>
+
+<h2>Cookies</h2>
+<p>These cookies are only set if you choose <strong>Accept</strong>:</p>
+<table>
+  <tr><th>Cookie</th><th>Set by</th><th>Purpose</th></tr>
+  <tr><td>_ga, _ga_07C6F64F8G</td><td>Google Analytics</td><td>Recognise a returning visitor and their visit</td></tr>
+  <tr><td>_clck, _clsk</td><td>Microsoft Clarity</td><td>Link page views from the same visitor and visit</td></tr>
+</table>
+<p>If you choose <strong>Reject</strong>, or make no choice, no analytics cookies are set. Google Analytics then only receives a basic, cookieless signal that a page was viewed, and Clarity records each page view separately without identifying you across pages or visits. Your choice is remembered in your browser's local storage under the name <code>ar-consent</code>.</p>
+
+<h2>Change your choice</h2>
+<div class="choice">
+  <p id="status">Checking your current choice...</p>
+  <div class="row"><button type="button" class="yes" id="accept">Accept analytics cookies</button><button type="button" id="reject">Reject analytics cookies</button></div>
+</div>
+
+<h2>Who handles the data</h2>
+<p>Arun Rajagopal is responsible for this site. Google and Microsoft process the analytics data on his behalf and may do so outside the UK, under their own data protection terms. See <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> and the <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft privacy statement</a>.</p>
+
+<h2>Your rights</h2>
+<p>You can ask what data is held about you, or ask for it to be deleted, by contacting Arun through <a href="https://www.linkedin.com/in/arajagopal/" rel="noopener">LinkedIn</a>. If you are unhappy with how your data is handled, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk</a>.</p>
+</main>
+<script>
+  (function(){
+    var status = document.getElementById('status');
+    function read(){ try { return localStorage.getItem('ar-consent'); } catch (e) { return null; } }
+    function show(){
+      var v = read();
+      status.textContent = v === 'granted' ? 'You have accepted analytics cookies.'
+        : v === 'denied' ? 'You have rejected analytics cookies.'
+        : 'You have not made a choice yet, so no analytics cookies are set.';
+    }
+    function clearCookies(){
+      ['_ga', '_ga_07C6F64F8G', '_clck', '_clsk'].forEach(function(n){
+        var host = location.hostname;
+        document.cookie = n + '=; Max-Age=0; path=/';
+        document.cookie = n + '=; Max-Age=0; path=/; domain=' + host;
+        document.cookie = n + '=; Max-Age=0; path=/; domain=.' + host;
+      });
+    }
+    document.getElementById('accept').onclick = function(){ try { localStorage.setItem('ar-consent', 'granted'); } catch (e) {} show(); };
+    document.getElementById('reject').onclick = function(){ try { localStorage.setItem('ar-consent', 'denied'); } catch (e) {} clearCookies(); show(); };
+    show();
+  })();
+</script>
+</body>
+</html>
