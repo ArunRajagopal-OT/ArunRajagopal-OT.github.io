@@ -242,6 +242,20 @@ ortant}
 </style>
 </head>
 <body>
+<style id="mobile-nav-css">
+.mobile-nav{display:none}
+.menu-btn-label{display:none}
+@media(max-width:900px){
+.mobile-bar #menuBtn{display:flex;align-items:center;gap:8px;padding:11px 16px 11px 14px;font-family:inherit;font-size:12px;font-weight:800;line-height:1;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.menu-btn-label{display:inline}
+.mobile-nav{display:flex;flex-direction:column;gap:2px;margin:0 0 26px;padding:0 0 18px;border-bottom:1px solid var(--line,rgba(148,163,184,.35))}
+.mobile-nav-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
+.mobile-nav-label{font-size:11px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2,var(--muted))}
+.mobile-nav-close{border:1px solid var(--line,rgba(148,163,184,.35));background:transparent;color:inherit;border-radius:999px;width:40px;height:40px;display:grid;place-items:center;cursor:pointer;padding:0}
+.mobile-nav-close svg{width:18px;height:18px;fill:currentColor;display:block}
+.mobile-nav .nav-link{display:block;width:100%;text-align:left;padding:12px 14px;font-size:15px;border-radius:12px}
+}
+</style>
 <div class="sidebar-overlay" id="overlay"></div>
 <aside class="sidebar" id="sidebar"><div class="dot-pattern"></div><svg aria-hidden="true" class="sidebar-network-art" viewbox="0 0 320 900">
 <defs>
@@ -282,7 +296,7 @@ ortant}
 <mpath href="#sidebarRoute"></mpath>
 </animatemotion>
 </circle>
-</svg><div class="sidebar-inner">
+</svg><div class="sidebar-inner"><nav aria-label="Sections" class="mobile-nav"><div class="mobile-nav-head"><span class="mobile-nav-label">Sections</span><button aria-label="Close menu" class="mobile-nav-close" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z"></path></svg></button></div><button class="nav-link active" data-target="hero" type="button">Home</button><button class="nav-link" data-target="profile" type="button">Profile</button><button class="nav-link" data-target="leadership" type="button">Leadership</button><button class="nav-link" data-target="sectors" type="button">Sectors</button><button class="nav-link" data-target="impact" type="button">Value</button><button class="nav-link" data-target="speaking" type="button">Speaking</button><button class="nav-link" data-target="publications" type="button">Publications</button><button class="nav-link" data-target="credentials" type="button">Credentials</button><button class="nav-link" data-target="education" type="button">Education</button><button class="nav-link" data-target="clients" type="button">Clients</button></nav>
 <div class="identity"><div class="name">Arun Rajagopal</div><div class="role-pill">Principal Cybersecurity Advisor &amp; Architect</div></div>
 <div class="divider"></div>
 <div class="contact-stack">
@@ -323,7 +337,7 @@ ortant}
 </div>
 </div><div class="sidebar-bottom"><div class="connect-label">Connect</div><div class="social-row"><a aria-label="LinkedIn" class="social" href="https://www.linkedin.com/in/arajagopal/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.8c0-3.77-2.01-5.52-4.7-5.52-2.16 0-3.13 1.19-3.67 2.02V8.5H9.14V21h3.49v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.85 2 3.3V21H21v-7.2Z"></path></svg></a></div><div class="mini-note">CEng · ISA/IEC 62443 EXPERT · ISASECURE ACSSA</div></div>
 </div></aside>
-<div class="mobile-bar"><button aria-label="Open menu" id="menuBtn"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"></path></svg></button></div>
+<div class="mobile-bar"><button aria-label="Open menu" aria-controls="sidebar" aria-expanded="false" id="menuBtn" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"></path></svg><span class="menu-btn-label">Menu</span></button></div>
 <div class="main">
 <div class="dock-shell" id="dockShell"><nav class="dock"><button class="nav-link active" data-target="hero">Home</button><button class="nav-link" data-target="profile">Profile</button><button class="nav-link" data-target="leadership">Leadership</button><button class="nav-link" data-target="sectors">Sectors</button><button class="nav-link" data-target="impact">Value</button><button class="nav-link" data-target="speaking">Speaking</button><button class="nav-link" data-target="publications">Publications</button><button class="nav-link" data-target="credentials">Credentials</button><button class="nav-link" data-target="education">Education</button><button class="nav-link" data-target="clients">Clients</button><button aria-disabled="true" class="nav-link blog-placeholder" title="Blog coming soon" type="button">Blog</button></nav></div>
 <section class="hero" id="hero"><svg aria-hidden="true" class="hero-fine-art hero-wind-art" viewbox="0 0 320 320">
