@@ -13,6 +13,14 @@
 .speaking-event-copy{display:grid;gap:12px;align-content:start;justify-items:start}
 .speaking-event-copy h3{font-size:24px;line-height:1.3;letter-spacing:-.015em;margin:0;color:var(--ink)}
 .speaking-event-copy p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+.speaking-event-copy p.speaking-subtitle{margin-top:-4px;font-size:16px;line-height:1.5;font-weight:600;color:var(--ink-2)}
+.speaking-flyer-play{position:relative;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.speaking-flyer-play:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 55%,var(--line));box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.speaking-flyer-play:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.speaking-play-hotspot{position:absolute;left:56.5%;top:88.2%;width:40.8%;height:8.9%;border-radius:999px;pointer-events:none;transition:box-shadow .25s ease,background-color .25s ease}
+.speaking-flyer-play:hover .speaking-play-hotspot,.speaking-flyer-play:focus-visible .speaking-play-hotspot{background:rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(255,255,255,.55),0 0 22px rgba(255,122,88,.55)}
+.speaking-highlights-head{margin-top:6px;scroll-margin-top:105px}
+@media(prefers-reduced-motion:reduce){.speaking-flyer-play,.speaking-play-hotspot{transition:none}.speaking-flyer-play:hover{transform:none}}
 .speaking-facts{display:grid;gap:6px;margin:4px 0 6px;padding:0;list-style:none}
 .speaking-facts li{font-size:13px;line-height:1.55;color:var(--ink-2);display:flex;gap:10px}
 .speaking-facts li span{min-width:52px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--muted-2);padding-top:2px}
@@ -52,15 +60,16 @@
 <div class="speaking-block">
 <div class="credential-subhead">
 <span>Upcoming</span>
-<small>ICS Switzerland webinar</small>
+<small>ICS Security Switzerland webinar</small>
 </div>
 <!-- To mark this event as past after 22 Oct 2026: change "Upcoming" below to "Past event" and remove the is-upcoming class. The script at the end of this section also does it automatically once data-ends has passed. -->
 <article class="card speaking-event is-portrait">
-<a class="speaking-flyer" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank" aria-label="ICS Switzerland event page"><img alt="ICS Switzerland webinar flyer for Arun Rajagopal's presentation on IEC 62443 for asset owners" loading="lazy" src="assets/speaking/ics-switzerland-2026-10-22.webp" width="1024" height="1536"/></a>
+<a class="speaking-flyer" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank" aria-label="ICS Security Switzerland event page"><img alt="ICS Security Switzerland webinar flyer for Arun Rajagopal's presentation: How IEC 62443 enables Asset Owners demonstrate Cyber Maturity" loading="lazy" src="assets/speaking/ics-security-switzerland-2026-10-22.webp" width="1024" height="1536"/></a>
 <div class="speaking-event-copy">
 <span class="speaking-status is-upcoming" data-ends="2026-10-22T16:30:00+02:00">Upcoming &middot; Thu 22 Oct 2026</span>
-<div class="meta">ICS Switzerland &middot; Webinar</div>
-<h3>IEC 62443 for asset owners: the ACSSA ISA Secure certification scheme</h3>
+<div class="meta">ICS Security Switzerland &middot; Webinar</div>
+<h3>How IEC 62443 enables Asset Owners demonstrate Cyber Maturity</h3>
+<p class="speaking-subtitle">ACSSA ISA Secure Certification Scheme for Asset Owners</p>
 <ul class="speaking-facts">
 <li><span>Date</span>Thursday 22 October 2026</li>
 <li><span>Time</span>4:00 to 4:30 pm CEST (3:00 to 3:30 pm UK)</li>
@@ -78,7 +87,7 @@
 <small>Industrial Cyber Days 2026</small>
 </div>
 <article class="card speaking-event">
-<div class="speaking-flyer"><img alt="Industrial Cyber Days 2026 panelist flyer for Arun Rajagopal, panel: Who Actually Owns the Decision?" loading="lazy" src="assets/speaking/icd-2026-panelist.webp" width="1080" height="1080"/></div>
+<div class="speaking-flyer speaking-flyer-play" role="button" tabindex="0" aria-label="Watch the highlights: play the Panel Introduction video" data-play-target="speakingIntroVideo"><img alt="Industrial Cyber Days 2026 panelist flyer for Arun Rajagopal, panel: Who Actually Owns the Decision?" loading="lazy" src="assets/speaking/icd-2026-panelist.webp" width="1080" height="1080"/><span class="speaking-play-hotspot" aria-hidden="true"></span></div>
 <div class="speaking-event-copy">
 <span class="speaking-status">Past event &middot; 13 to 14 Oct 2026</span>
 <div class="meta">Industrial Cyber Days 2026 &middot; Critical Infrastructure APAC &amp; EMEA</div>
@@ -92,9 +101,13 @@
 </div>
 </article>
 
+<div class="credential-subhead speaking-highlights-head" id="speaking-highlights">
+<span>Watch the highlights</span>
+<small>Industrial Cyber Days 2026 panel clips</small>
+</div>
 <div class="speaking-video-grid">
 <article class="card speaking-video">
-<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-intro.webp" aria-label="Panel Introduction"><source src="assets/speaking/clip-0-panel-introduction-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-frame"><video id="speakingIntroVideo" controls preload="none" playsinline poster="assets/speaking/poster-intro.webp" aria-label="Panel Introduction"><source src="assets/speaking/clip-0-panel-introduction-web.mp4" type="video/mp4"/></video></div>
 <div class="speaking-video-body"><div class="meta">Intro &middot; 2:59</div><p class="speaking-caption">Panel Introduction</p></div>
 </article>
 <article class="card speaking-video">
@@ -119,6 +132,7 @@
 </div>
 </article>
 </div>
+<script>(function(){var p=document.querySelector('#speaking .speaking-flyer-play');if(!p)return;function play(){var v=document.getElementById(p.getAttribute('data-play-target'));var h=document.getElementById('speaking-highlights')||v;if(!v)return;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;h.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});v.preload='auto';var r=v.play();if(r&&r.catch){r.catch(function(){v.muted=true;var r2=v.play();if(r2&&r2.catch)r2.catch(function(){});});}}p.addEventListener('click',play);p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){e.preventDefault();play();}});})();</script>
 <script>(function(){document.querySelectorAll('#speaking .speaking-status[data-ends]').forEach(function(el){var t=Date.parse(el.getAttribute('data-ends'));if(t&&Date.now()>t){el.classList.remove('is-upcoming');el.textContent='Past event · 22 Oct 2026';}});})();</script>
 </section><section class="reveal" id="publications">
 <div class="section-kicker">06. Publications</div>
