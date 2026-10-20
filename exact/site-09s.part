@@ -1,0 +1,147 @@
+<style>
+/* Speaking + Publications (added) */
+.speaking-block{display:grid;gap:18px}
+.speaking-block + .speaking-block{margin-top:34px}
+.speaking-status{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted);background:rgba(255,255,255,.02)}
+.speaking-status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--muted-2)}
+.speaking-status.is-upcoming{color:var(--ink);border-color:color-mix(in srgb,var(--accent) 55%,var(--line));background:var(--accent-soft)}
+.speaking-status.is-upcoming::before{background:var(--accent);box-shadow:0 0 0 4px rgba(224,122,95,.18)}
+.speaking-event{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:30px;align-items:center;padding:24px}
+.speaking-event.is-portrait{grid-template-columns:minmax(0,250px) minmax(0,1fr)}
+.speaking-flyer{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface-2);line-height:0}
+.speaking-flyer img{display:block;width:100%;height:auto}
+.speaking-event-copy{display:grid;gap:12px;align-content:start;justify-items:start}
+.speaking-event-copy h3{font-size:24px;line-height:1.3;letter-spacing:-.015em;margin:0;color:var(--ink)}
+.speaking-event-copy p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+.speaking-facts{display:grid;gap:6px;margin:4px 0 6px;padding:0;list-style:none}
+.speaking-facts li{font-size:13px;line-height:1.55;color:var(--ink-2);display:flex;gap:10px}
+.speaking-facts li span{min-width:52px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--muted-2);padding-top:2px}
+.speaking-intro{margin:6px 0 0;font-size:15px;line-height:1.7;color:var(--ink-2);max-width:760px}
+.speaking-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.speaking-video{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.speaking-video-frame{position:relative;aspect-ratio:16/9;background:#05080c;border-bottom:1px solid var(--line)}
+.speaking-video-frame video,.speaking-video-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.speaking-video-frame video{object-fit:contain;background:#05080c}
+.speaking-video-body{padding:18px 22px 22px;display:grid;gap:8px}
+.speaking-video-body .meta{margin:0}
+.speaking-video-body p.speaking-caption{margin:0;font-size:15px;line-height:1.6;font-weight:600;color:var(--ink)}
+.speaking-full{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:26px;align-items:center;padding:18px}
+.speaking-full .speaking-video-frame{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.speaking-full-copy{display:grid;gap:8px;justify-items:start}
+.speaking-full-copy h3{margin:0;font-size:19px;line-height:1.35;color:var(--ink)}
+.speaking-full-copy p{margin:0;font-size:13px;line-height:1.65;color:var(--muted)}
+.pub-feature{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:0;padding:0;overflow:hidden}
+.pub-art{position:relative;min-height:260px;background:radial-gradient(circle at 18% 12%,rgba(224,122,95,.18),transparent 46%),linear-gradient(160deg,var(--surface-2),#0f161e);border-right:1px solid var(--line);display:grid;place-items:center;padding:28px}
+.pub-art svg{width:100%;max-width:240px;height:auto;fill:none;stroke:var(--accent);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pub-art svg .soft{stroke:var(--muted-2);opacity:.55}
+.pub-art-label{position:absolute;left:24px;top:22px;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pub-copy{padding:32px 34px;display:grid;gap:12px;align-content:center;justify-items:start}
+.pub-copy h3{margin:0;font-size:25px;line-height:1.3;letter-spacing:-.015em;color:var(--ink)}
+.pub-byline{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+.pub-byline strong{color:var(--ink-2);font-weight:700}
+.pub-tags{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 8px}
+.pub-tags span{font-size:11px;font-weight:700;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.02)}
+@media(max-width:900px){.speaking-event,.speaking-event.is-portrait,.speaking-full,.pub-feature{grid-template-columns:1fr}.speaking-event.is-portrait .speaking-flyer{max-width:340px}.pub-art{border-right:0;border-bottom:1px solid var(--line);min-height:200px}}
+@media(max-width:760px){.speaking-video-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.speaking-event{padding:18px;gap:20px}.speaking-event-copy h3{font-size:21px}.pub-copy{padding:24px 22px}.pub-copy h3{font-size:21px}.speaking-full{padding:14px}}
+</style><section class="reveal" id="speaking">
+<div class="section-kicker">05. Speaking</div>
+<h2 class="section-title">Speaking Opportunities</h2>
+<p class="section-copy">Panels, webinars and presentations where Arun shares practical perspectives on industrial cyber security, governance and standards.</p>
+
+<div class="speaking-block">
+<div class="credential-subhead">
+<span>Upcoming</span>
+<small>ICS Switzerland webinar</small>
+</div>
+<!-- To mark this event as past after 22 Oct 2026: change "Upcoming" below to "Past event" and remove the is-upcoming class. The script at the end of this section also does it automatically once data-ends has passed. -->
+<article class="card speaking-event is-portrait">
+<a class="speaking-flyer" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank" aria-label="ICS Switzerland event page"><img alt="ICS Switzerland webinar flyer for Arun Rajagopal's presentation on IEC 62443 for asset owners" loading="lazy" src="assets/speaking/ics-switzerland-2026-10-22.webp" width="1024" height="1536"/></a>
+<div class="speaking-event-copy">
+<span class="speaking-status is-upcoming" data-ends="2026-10-22T16:30:00+02:00">Upcoming &middot; Thu 22 Oct 2026</span>
+<div class="meta">ICS Switzerland &middot; Webinar</div>
+<h3>IEC 62443 for asset owners: the ACSSA ISA Secure certification scheme</h3>
+<ul class="speaking-facts">
+<li><span>Date</span>Thursday 22 October 2026</li>
+<li><span>Time</span>4:00 to 4:30 pm CEST (3:00 to 3:30 pm UK)</li>
+<li><span>Where</span>Online</li>
+<li><span>Role</span>Presenter</li>
+</ul>
+<a class="btn-primary" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank">View the event page</a>
+</div>
+</article>
+</div>
+
+<div class="speaking-block">
+<div class="credential-subhead">
+<span>Past</span>
+<small>Industrial Cyber Days 2026</small>
+</div>
+<article class="card speaking-event">
+<div class="speaking-flyer"><img alt="Industrial Cyber Days 2026 panelist flyer for Arun Rajagopal, panel: Who Actually Owns the Decision?" loading="lazy" src="assets/speaking/icd-2026-panelist.webp" width="1080" height="1080"/></div>
+<div class="speaking-event-copy">
+<span class="speaking-status">Past event &middot; 13 to 14 Oct 2026</span>
+<div class="meta">Industrial Cyber Days 2026 &middot; Critical Infrastructure APAC &amp; EMEA</div>
+<h3>Panelist: &ldquo;Who Owns the Decision?&rdquo;</h3>
+<ul class="speaking-facts">
+<li><span>Date</span>13 to 14 October 2026</li>
+<li><span>Where</span>Virtual</li>
+<li><span>Role</span>Panelist</li>
+</ul>
+<p class="speaking-intro">Here are some snippets of Arun's 2 cents from the Industrial Cyber Days 2026 Panel Discussion around "Who Owns the Decision".</p>
+</div>
+</article>
+
+<div class="speaking-video-grid">
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-intro.webp" aria-label="Panel Introduction"><source src="assets/speaking/clip-0-panel-introduction-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Intro &middot; 2:59</div><p class="speaking-caption">Panel Introduction</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-clip-A.webp" aria-label="Clip A: Who Owns the Decision"><source src="assets/speaking/clip-A-who-owns-the-decision-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip A &middot; 1:01</div><p class="speaking-caption">Who Owns the Decision and Why it is informed by Cyber Risk.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-clip-B.webp" aria-label="Clip B: Cybersecurity obligations for suppliers"><source src="assets/speaking/clip-B-suppliers-share-the-risk-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip B &middot; 1:06</div><p class="speaking-caption">Cybersecurity Obligations for Suppliers towards Asset Owners.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-clip-C.webp" aria-label="Clip C: Top 3 takeaways for asset owners"><source src="assets/speaking/clip-C-cyber-like-safety-culture-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip C &middot; 0:51</div><p class="speaking-caption">Top 3 Takeaways for Asset Owners embarking on a Cyber Transformation program.</p></div>
+</article>
+</div>
+
+<article class="card speaking-full">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-full-cut.webp" aria-label="Full session cut"><source src="assets/speaking/aruns-cut-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-full-copy">
+<div class="meta">Full session &middot; 7:22</div>
+<h3>Watch the full 7 min cut</h3>
+</div>
+</article>
+</div>
+<script>(function(){document.querySelectorAll('#speaking .speaking-status[data-ends]').forEach(function(el){var t=Date.parse(el.getAttribute('data-ends'));if(t&&Date.now()>t){el.classList.remove('is-upcoming');el.textContent='Past event · 22 Oct 2026';}});})();</script>
+</section><section class="reveal" id="publications">
+<div class="section-kicker">06. Publications</div>
+<h2 class="section-title">Publications</h2>
+<p class="section-copy">Articles and commentary by Arun on industrial cyber security, regulation and product security.</p>
+<article class="card pub-feature">
+<div class="pub-art" aria-hidden="true">
+<span class="pub-art-label">Featured article</span>
+<svg viewBox="0 0 240 170">
+<path class="soft" d="M40 30 H150 L178 58 V150 H40 Z"/>
+<path class="soft" d="M150 30 V58 H178"/>
+<path d="M60 76 H158 M60 92 H158 M60 108 H132"/>
+<path d="M60 56 H118" stroke-width="3"/>
+<path d="M180 92 L206 102 V122 C206 138 194 148 180 154 C166 148 154 138 154 122 V102 Z"/>
+<path d="M170 124 L178 132 L192 116"/>
+</svg>
+</div>
+<div class="pub-copy">
+<div class="meta">Automation.com &middot; Navigating CRA column &middot; 16 October 2026</div>
+<h3>The EU Cyber Resilience Act: What Does It Mean for UK Suppliers?</h3>
+<p class="pub-byline">By <strong>Arun Rajagopal</strong>. Published by Automation.com, International Society of Automation (ISA).</p>
+<div class="pub-tags"><span>Cyber Resilience Act</span><span>UK Suppliers</span><span>Product Security</span></div>
+<a class="btn-primary" href="https://www.automation.com/article/the-eu-cyber-resilience-act-what-does-it-mean-uk-suppliers" rel="noopener noreferrer" target="_blank">Read the article</a>
+</div>
+</article>
+</section>
