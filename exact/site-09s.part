@@ -20,6 +20,7 @@
 .speaking-play-hotspot{position:absolute;left:56.5%;top:88.2%;width:40.8%;height:8.9%;border-radius:999px;pointer-events:none;transition:box-shadow .25s ease,background-color .25s ease}
 .speaking-flyer-play:hover .speaking-play-hotspot,.speaking-flyer-play:focus-visible .speaking-play-hotspot{background:rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(255,255,255,.55),0 0 22px rgba(255,122,88,.55)}
 .speaking-highlights-head{margin-top:6px;scroll-margin-top:105px}
+.speaking-talk-links{display:flex;flex-wrap:wrap;gap:10px}
 @media(prefers-reduced-motion:reduce){.speaking-flyer-play,.speaking-play-hotspot{transition:none}.speaking-flyer-play:hover{transform:none}}
 .speaking-facts{display:grid;gap:6px;margin:4px 0 6px;padding:0;list-style:none}
 .speaking-facts li{font-size:13px;line-height:1.55;color:var(--ink-2);display:flex;gap:10px}
@@ -59,14 +60,13 @@
 
 <div class="speaking-block">
 <div class="credential-subhead">
-<span>Upcoming</span>
+<span>Past</span>
 <small>ICS Security Switzerland webinar</small>
 </div>
-<!-- To mark this event as past after 22 Oct 2026: change "Upcoming" below to "Past event" and remove the is-upcoming class. The script at the end of this section also does it automatically once data-ends has passed. -->
 <article class="card speaking-event is-portrait">
 <a class="speaking-flyer" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank" aria-label="ICS Security Switzerland event page"><img alt="ICS Security Switzerland webinar flyer for Arun Rajagopal's presentation: How IEC 62443 enables Asset Owners demonstrate Cyber Maturity" loading="lazy" src="assets/speaking/ics-security-switzerland-2026-10-22.webp" width="1024" height="1536"/></a>
 <div class="speaking-event-copy">
-<span class="speaking-status is-upcoming" data-ends="2026-10-22T16:30:00+02:00">Upcoming &middot; Thu 22 Oct 2026</span>
+<span class="speaking-status">Past event &middot; Thu 22 Oct 2026</span>
 <div class="meta">ICS Security Switzerland &middot; Webinar</div>
 <h3>How IEC 62443 enables Asset Owners demonstrate Cyber Maturity</h3>
 <p class="speaking-subtitle">ISA Secure ACSSA Certification Scheme for Asset Owners</p>
@@ -76,9 +76,47 @@
 <li><span>Where</span>Online</li>
 <li><span>Role</span>Presenter</li>
 </ul>
+<p class="speaking-intro">Here are some short clips from Arun's talk at the ICS Security Switzerland webinar, on how IEC 62443 and the ACSSA scheme help asset owners demonstrate their cyber maturity.</p>
+<div class="speaking-talk-links">
 <a class="btn-primary" href="https://www.icssec.ch/events/#event-2026-10-22" rel="noopener noreferrer" target="_blank">View the event page</a>
+<!-- Later: add the full talk and the slides here, next to the event page button:
+<a class="btn-secondary" href="YOUTUBE_URL" rel="noopener noreferrer" target="_blank">Watch the full talk</a>
+<a class="btn-secondary" href="assets/speaking/ics-security-switzerland-2026-10-22-slides.pdf" download>Download the slides (PDF)</a>
+-->
+</div>
 </div>
 </article>
+
+<div class="credential-subhead speaking-highlights-head" id="speaking-ics-highlights">
+<span>Watch the highlights</span>
+<small>ICS Security Switzerland webinar clips</small>
+</div>
+<div class="speaking-video-grid">
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-1.webp" aria-label="Clip 1: The question has changed"><source src="assets/speaking/ics-clip-1-the-question-has-changed-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 1 &middot; 0:55</div><p class="speaking-caption">How the question has changed for asset owners: are we secure, can we prove it, is it sustainable?</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-2.webp" aria-label="Clip 2: ACSSA is for asset owners"><source src="assets/speaking/ics-clip-2-acssa-is-for-asset-owners-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 2 &middot; 1:13</div><p class="speaking-caption">Suppliers have their schemes. ACSSA is for asset owners and how they run their control systems.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-3.webp" aria-label="Clip 3: Having a policy is not enough"><source src="assets/speaking/ics-clip-3-having-a-policy-is-not-enough-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 3 &middot; 0:53</div><p class="speaking-caption">Having a policy is not enough. Evidence that it is practised is what moves you up a maturity level.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-4.webp" aria-label="Clip 4: The ACSSA evaluation, step by step"><source src="assets/speaking/ics-clip-4-acssa-evaluation-step-by-step-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 4 &middot; 1:01</div><p class="speaking-caption">The ACSSA evaluation step by step: risk assessment, programme scope, then planning the audit.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-5.webp" aria-label="Clip 5: Why risk assessments fail the evaluation"><source src="assets/speaking/ics-clip-5-why-risk-assessments-fail-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 5 &middot; 0:58</div><p class="speaking-caption">Why risk assessments fail the ACSSA evaluation, and how that can lead to a non-conformance.</p></div>
+</article>
+<article class="card speaking-video">
+<div class="speaking-video-frame"><video controls preload="none" playsinline poster="assets/speaking/poster-ics-clip-6.webp" aria-label="Clip 6: Independent proof of cyber maturity"><source src="assets/speaking/ics-clip-6-independent-proof-of-cyber-maturity-web.mp4" type="video/mp4"/></video></div>
+<div class="speaking-video-body"><div class="meta">Clip 6 &middot; 1:08</div><p class="speaking-caption">Why go through ACSSA: independent verification by impartial auditors, and confidence for regulators under NIS2.</p></div>
+</article>
+</div>
 </div>
 
 <div class="speaking-block">
@@ -133,7 +171,6 @@
 </article>
 </div>
 <script>(function(){var p=document.querySelector('#speaking .speaking-flyer-play');if(!p)return;function play(){var v=document.getElementById(p.getAttribute('data-play-target'));var h=document.getElementById('speaking-highlights')||v;if(!v)return;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;h.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});v.preload='auto';var r=v.play();if(r&&r.catch){r.catch(function(){v.muted=true;var r2=v.play();if(r2&&r2.catch)r2.catch(function(){});});}}p.addEventListener('click',play);p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){e.preventDefault();play();}});})();</script>
-<script>(function(){document.querySelectorAll('#speaking .speaking-status[data-ends]').forEach(function(el){var t=Date.parse(el.getAttribute('data-ends'));if(t&&Date.now()>t){el.classList.remove('is-upcoming');el.textContent='Past event · 22 Oct 2026';}});})();</script>
 </section><section class="reveal" id="publications">
 <div class="section-kicker">06. Publications</div>
 <h2 class="section-title">Publications</h2>
